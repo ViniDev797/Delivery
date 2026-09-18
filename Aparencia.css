@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #15191c;
+    color: white;
+}
+
+
+/* =========================
+   TOPO
+========================= */
+
+.topo {
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 25px;
+
+    background: #202529;
+
+    border-bottom: 1px solid #3b4145;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.relogio {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   COZINHA
+========================= */
+
+.cozinha {
+    padding: 25px;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.titulo {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.titulo h1 {
+    font-size: 25px;
+}
+
+.titulo span {
+    color: #9ca3a7;
+}
+
+
+/* =========================
+   LISTA DE PEDIDOS
+========================= */
+
+.lista-pedidos {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+
+/* =========================
+   PEDIDO
+========================= */
+
+.pedido {
+    background: #242a2e;
+
+    border: 1px solid #3b4145;
+
+    border-left: 5px solid #16a34a;
+
+    border-radius: 6px;
+
+    padding: 15px;
+
+    transition: 0.2s;
+}
+
+.pedido:hover {
+    transform: translateY(-2px);
+
+    background: #2b3236;
+}
+
+
+/* =========================
+   CABEÇALHO PEDIDO
+========================= */
+
+.pedido-cabecalho {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid #3b4145;
+}
+
+.pedido-cabecalho strong {
+    font-size: 18px;
+}
+
+.cliente {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #9ca3a7;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   TEMPO
+========================= */
+
+.tempo {
+    text-align: right;
+}
+
+.tempo span {
+    display: block;
+
+    color: #9ca3a7;
+
+    font-size: 10px;
+}
+
+.tempo-real {
+    color: #22c55e;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   ITENS
+========================= */
+
+.itens {
+    padding: 12px 0;
+}
+
+.item {
+    display: flex;
+
+    gap: 10px;
+
+    padding: 6px 0;
+
+    font-size: 14px;
+}
+
+.item strong {
+    color: #22c55e;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+.pedido-rodape {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-top: 10px;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.status {
+    padding: 6px 9px;
+
+    border-radius: 4px;
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+
+/* EM PREPARO = VERDE */
+
+.preparo {
+    background: #16a34a;
+
+    color: white;
+}
+
+
+/* ATRASADO = VERMELHO */
+
+.atrasado {
+    background: #dc2626;
+
+    color: white;
+}
+
+
+/* =========================
+   BOTÃO PRONTO
+========================= */
+
+.pedido button {
+    border: none;
+
+    background: #16a34a;
+
+    color: white;
+
+    padding: 8px 12px;
+
+    border-radius: 4px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.pedido button:hover {
+    background: #15803d;
+}
+
+
+/* =========================
+   PEDIDO ATRASADO
+========================= */
+
+.pedido.atrasado-pedido {
+    border-left-color: #dc2626;
+
+    background: #321e20;
+}
+
+.pedido.atrasado-pedido .tempo-real {
+    color: #ef4444;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 1000px) {
+
+    .lista-pedidos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .lista-pedidos {
+        grid-template-columns: 1fr;
+    }
+
+    .cozinha {
+        padding: 15px;
+    }
+
+}
