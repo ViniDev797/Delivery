@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Atendimento - Restaurante</title>
+
+    <link rel="stylesheet" href="Aaparencia.css">
+    
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+
+        <div class="logo">
+            🍽️ RESTAURANTE
+        </div>
+
+        <nav>
+            <a href="atendimento.html" class="ativo">Atendimento</a>
+            <a href="cozinha.html">Cozinha</a>
+        </nav>
+
+        <div class="relogio" id="relogio">
+            00:00:00
+        </div>
+
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+
+        <h1>Atendimento</h1>
+
+        <p class="subtitulo">
+            Visão geral do restaurante
+        </p>
+
+
+        <!-- INDICADORES -->
+        <section class="indicadores">
+
+            <div class="indicador">
+                <span>💰</span>
+                <div>
+                    <small>Total vendido hoje</small>
+                    <strong id="totalVendido">R$ 2.450,00</strong>
+                </div>
+            </div>
+
+
+            <div class="indicador">
+                <span>🧾</span>
+                <div>
+                    <small>Pedidos</small>
+                    <strong id="totalPedidos">18</strong>
+                </div>
+            </div>
+
+
+            <div class="indicador">
+                <span>🪑</span>
+                <div>
+                    <small>Mesas ocupadas</small>
+                    <strong id="mesasOcupadas">8</strong>
+                </div>
+            </div>
+
+
+            <div class="indicador">
+                <span>📈</span>
+                <div>
+                    <small>Ticket médio</small>
+                    <strong>R$ 136,11</strong>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- ÁREA PRINCIPAL -->
+        <section class="grid-principal">
+
+
+            <!-- MESAS -->
+            <div class="painel">
+
+                <div class="painel-titulo">
+                    <h2>Mesas</h2>
+
+                    <button onclick="abrirMesa()">
+                        + Abrir mesa
+                    </button>
+                </div>
+
+
+                <div class="mesas">
+
+                    <div class="mesa livre" onclick="selecionarMesa(1)">
+                        <strong>Mesa 01</strong>
+                        <span>4 lugares</span>
+                        <small>LIVRE</small>
+                    </div>
+
+
+                    <div class="mesa ocupada" onclick="selecionarMesa(2)">
+                        <strong>Mesa 02</strong>
+                        <span>4 lugares</span>
+                        <small>OCUPADA</small>
+                    </div>
+
+
+                    <div class="mesa ocupada" onclick="selecionarMesa(3)">
+                        <strong>Mesa 03</strong>
+                        <span>6 lugares</span>
+                        <small>OCUPADA</small>
+                    </div>
+
+
+                    <div class="mesa reservada" onclick="selecionarMesa(4)">
+                        <strong>Mesa 04</strong>
+                        <span>4 lugares</span>
+                        <small>RESERVADA</small>
+                    </div>
+
+
+                    <div class="mesa livre" onclick="selecionarMesa(5)">
+                        <strong>Mesa 05</strong>
+                        <span>2 lugares</span>
+                        <small>LIVRE</small>
+                    </div>
+
+
+                    <div class="mesa ocupada" onclick="selecionarMesa(6)">
+                        <strong>Mesa 06</strong>
+                        <span>6 lugares</span>
+                        <small>OCUPADA</small>
+                    </div>
+
+
+                    <div class="mesa limpeza">
+                        <strong>Mesa 07</strong>
+                        <span>4 lugares</span>
+                        <small>EM LIMPEZA</small>
+                    </div>
+
+
+                    <div class="mesa ocupada" onclick="selecionarMesa(8)">
+                        <strong>Mesa 08</strong>
+                        <span>2 lugares</span>
+                        <small>OCUPADA</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PEDIDOS -->
+            <div class="painel">
+
+                <div class="painel-titulo">
+
+                    <h2>Pedidos</h2>
+
+                    <button onclick="novoPedido()">
+                        + Novo pedido
+                    </button>
+
+                </div>
+
+
+                <div class="pedidos">
+
+
+                    <div class="pedido">
+
+                        <div class="pedido-topo">
+
+                            <strong>#1025</strong>
+
+                            <span class="status preparo">
+                                EM PREPARO
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Mesa 02 • João
+                        </p>
+
+                        <div class="pedido-info">
+                            5 itens
+                            <strong>R$ 87,00</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="pedido">
+
+                        <div class="pedido-topo">
+
+                            <strong>#1026</strong>
+
+                            <span class="status pronto">
+                                PRONTO
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Mesa 03 • Carlos
+                        </p>
+
+                        <div class="pedido-info">
+                            3 itens
+                            <strong>R$ 64,00</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="pedido">
+
+                        <div class="pedido-topo">
+
+                            <strong>#1027</strong>
+
+                            <span class="status entrega">
+                                EM ENTREGA
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Delivery • Ana
+                        </p>
+
+                        <div class="pedido-info">
+                            6 itens
+                            <strong>R$ 112,00</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="pedido">
+
+                        <div class="pedido-topo">
+
+                            <strong>#1028</strong>
+
+                            <span class="status entregue">
+                                ENTREGUE
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Delivery • Pedro
+                        </p>
+
+                        <div class="pedido-info">
+                            4 itens
+                            <strong>R$ 78,00</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- MOTOQUEIROS -->
+        <section class="painel motoqueiros">
+
+            <div class="painel-titulo">
+
+                <div>
+                    <h2>Motoqueiros</h2>
+
+                    <p>
+                        Controle das entregas
+                    </p>
+                </div>
+
+                <button onclick="cadastrarMotoqueiro()">
+                    + Cadastrar motoqueiro
+                </button>
+
+            </div>
+
+
+            <div class="moto-grid">
+
+
+                <div class="moto">
+
+                    <div class="moto-icon">
+                        🏍️
+                    </div>
+
+                    <div class="moto-dados">
+
+                        <strong>Lucas</strong>
+
+                        <span>
+                            🏍️ Honda CG 160
+                        </span>
+
+                        <span>
+                            Placa: ABC-1D23
+                        </span>
+
+                        <span>
+                            Pedido: #1027
+                        </span>
+
+                    </div>
+
+                    <span class="moto-status rua">
+                        NA RUA
+                    </span>
+
+                </div>
+
+
+                <div class="moto">
+
+                    <div class="moto-icon">
+                        🏍️
+                    </div>
+
+                    <div class="moto-dados">
+
+                        <strong>Marcos</strong>
+
+                        <span>
+                            🏍️ Honda Fan 160
+                        </span>
+
+                        <span>
+                            Placa: DEF-4G56
+                        </span>
+
+                        <span>
+                            Nenhum pedido
+                        </span>
+
+                    </div>
+
+                    <span class="moto-status disponivel">
+                        DISPONÍVEL
+                    </span>
+
+                </div>
+
+
+                <div class="moto">
+
+                    <div class="moto-icon">
+                        🏍️
+                    </div>
+
+                    <div class="moto-dados">
+
+                        <strong>Rafael</strong>
+
+                        <span>
+                            🏍️ Yamaha Fazer
+                        </span>
+
+                        <span>
+                            Placa: HIJ-7K89
+                        </span>
+
+                        <span>
+                            Pedido: #1029
+                        </span>
+
+                    </div>
+
+                    <span class="moto-status rua">
+                        NA RUA
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- RESUMO -->
+        <section class="resumo">
+
+            <div>
+                <span>Pedidos em preparo</span>
+                <strong>4</strong>
+            </div>
+
+            <div>
+                <span>Pedidos prontos</span>
+                <strong>2</strong>
+            </div>
+
+            <div>
+                <span>Pedidos em entrega</span>
+                <strong>3</strong>
+            </div>
+
+            <div>
+                <span>Pedidos entregues</span>
+                <strong>9</strong>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="Ajs.js"></script>
+    
+
+</body>
+
+</html>
